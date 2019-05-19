@@ -1,12 +1,26 @@
 import React from 'react';
-import logo from './logo.svg';
-import
+import { createMuiTheme } from '@material-ui/core/styles';
+import AppBar from './header/AppBar'
+import blue from "@material-ui/core/colors/blue";
+import red from "@material-ui/core/colors/red";
+import MuiThemeProvider from "@material-ui/core/styles/MuiThemeProvider";
 
-function App() {
+const theme = createMuiTheme(
+    {
+      palette: {
+        primary: blue,
+        secondary: red,
+      },
+    }
+);
+
+function App(props) {
   return (
-    <div className="App">
-
-    </div>
+    <MuiThemeProvider theme={theme}>
+      <div>
+        <AppBar/>
+      </div>
+    </MuiThemeProvider>
   );
 }
 
