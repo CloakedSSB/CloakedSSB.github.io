@@ -30,16 +30,6 @@ class myAppBar extends React.Component{
 
     constructor(props) {
         super(props);
-
-        this.state = {
-          openSettings: false
-        }
-    }
-
-    onClick() {
-      this.setState({
-        openSettings: !this.state.openSettings
-      })
     }
 
     render() {
@@ -52,13 +42,12 @@ class myAppBar extends React.Component{
                           <Typography variant={"h6"} color={"inherit"}>Stage Bans</Typography>
                       </div>
                       <div>
-                          <IconButton className={classes.rightButton} color={"inherit"} onClick={() => this.onClick()}>
+                          <IconButton className={classes.rightButton} color={"inherit"} onClick={this.props.toggle}>
                               <SettingsIcon/>
                           </IconButton>
                       </div>
                   </Toolbar>
               </AppBar>
-            <SettingsDialog open={this.state.openSettings}/>
           </div>
         );
     }
