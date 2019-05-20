@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/stage-bans/static/css/main.34de6062.chunk.css",
-    "main.js": "/stage-bans/static/js/main.a69a8b47.chunk.js",
-    "main.js.map": "/stage-bans/static/js/main.a69a8b47.chunk.js.map",
+    "main.js": "/stage-bans/static/js/main.71748f77.chunk.js",
+    "main.js.map": "/stage-bans/static/js/main.71748f77.chunk.js.map",
     "runtime~main.js": "/stage-bans/static/js/runtime~main.a1cd77eb.js",
     "runtime~main.js.map": "/stage-bans/static/js/runtime~main.a1cd77eb.js.map",
-    "static/js/2.b48f1146.chunk.js": "/stage-bans/static/js/2.b48f1146.chunk.js",
-    "static/js/2.b48f1146.chunk.js.map": "/stage-bans/static/js/2.b48f1146.chunk.js.map",
+    "static/js/2.1a0fe6fe.chunk.js": "/stage-bans/static/js/2.1a0fe6fe.chunk.js",
+    "static/js/2.1a0fe6fe.chunk.js.map": "/stage-bans/static/js/2.1a0fe6fe.chunk.js.map",
     "index.html": "/stage-bans/index.html",
-    "precache-manifest.8afc02976f91f9bb6e5d08ddd309d6c2.js": "/stage-bans/precache-manifest.8afc02976f91f9bb6e5d08ddd309d6c2.js",
+    "precache-manifest.aba7d534ee0bf8016257e2d91e749451.js": "/stage-bans/precache-manifest.aba7d534ee0bf8016257e2d91e749451.js",
     "service-worker.js": "/stage-bans/service-worker.js",
     "static/css/main.34de6062.chunk.css.map": "/stage-bans/static/css/main.34de6062.chunk.css.map"
   }
