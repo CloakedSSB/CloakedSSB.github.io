@@ -3,10 +3,10 @@ import { withStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
-import MenuIcon from '@material-ui/icons/Menu';
 import IconButton from '@material-ui/core/IconButton';
 import SettingsIcon from '@material-ui/icons/Settings';
-import SettingsDialog from  '../body/SettingsDialog'
+import Tabs from '@material-ui/core/Tabs';
+import Tab from '@material-ui/core/Tab';
 
 
 const styles = {
@@ -47,6 +47,10 @@ class myAppBar extends React.Component{
                           </IconButton>
                       </div>
                   </Toolbar>
+                  <Tabs value={this.props.tab} onChange={(event, value) => this.props.handleTabChange(value)}>
+                      <Tab label="Starters" />
+                      <Tab label="Counterpicks" />
+                  </Tabs>
               </AppBar>
           </div>
         );

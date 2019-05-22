@@ -39,12 +39,18 @@ class Stages extends React.Component {
 
     const temp = []  ;
     for (let i = 0; i < this.stages.length; i++) {
-      temp[i] = ""
+      if (this.props.stageObj[this.stages[i]]) {
+        temp[i] = this.props.stageObj[this.stages[i]];
+      } else {
+        temp[i] = "";
+      }
     }
 
     this.state = {
       stageType: temp
-    }
+    };
+
+    this.stageObj = {};
 
   }
 
@@ -52,13 +58,8 @@ class Stages extends React.Component {
     const temp = this.state.stageType.slice();
     temp[index] = value;
     this.setState({stageType: temp});
-    let tempObj = {};
-    for (let [i, value] of this.state.stageType.values()) {
-      if (value) {
-        tempObj[this.stages[i]] = value;
-      }
-    }
-    this.props.setStageObj(tempObj);
+    this.stageObj[this.stages[index]] = value;
+    this.props.setStageObj(this.stageObj);
   };
 
   render() {
@@ -126,8 +127,7 @@ class SettingsDialog extends React.Component {
   };
 
   handleClose = () => {
-    this.setState({open: false})
-    console.log(this.props.stageObj)
+    this.props.toggle();
   };
 
   render() {
@@ -147,7 +147,7 @@ class SettingsDialog extends React.Component {
         </Tabs>
         <DialogContent>
           {this.state.tab === 0 && <Settings/>}
-          {this.state.tab === 1 && <Stages setStageObj={this.props.setStageObj}/>}
+          {this.state.tab === 1 && <Stages setStageObj={this.props.setStageObj} stageObj={this.props.stageObj}/>}
           {this.state.tab === 2 && <Connection/>}
         </DialogContent>
         <DialogActions>
